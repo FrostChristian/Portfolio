@@ -1,18 +1,50 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# ignore all files starting with . or ~
+.*
+~*
 
-# Other files and folders
-.settings/
+# ignore node/grunt dependency directories
+node_modules/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# ignore portfolio images
+/resources/img/works
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore private/secret files
+*.der
+*.key
+*.pem
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!.phpcs.xml.dist
