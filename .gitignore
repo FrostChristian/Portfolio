@@ -2,9 +2,6 @@
 .*
 ~*
 
-# ignore node/grunt dependency directories
-node_modules/
-
 # ignore portfolio images
 /resources/img/works
 
@@ -24,6 +21,7 @@ Thumbs.db
 *.exe
 *.o
 *.so
+*.apk
 
 # ignore packaged files
 *.7z
