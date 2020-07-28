@@ -37,7 +37,7 @@ body {
 }
 
 .is-centered {
-    text-align: center
+    text-align: center;
 }
 
 section {
@@ -87,6 +87,10 @@ h6 {
     text-align: left;
     margin-top: 2rem;
 
+}
+
+.smallprint {
+    font-size: 60%;
 }
 
 /*-----------Buttons------------*/
@@ -593,14 +597,13 @@ textarea {
 }
 
 .work-img-container {
-    width: 100%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .work-img-container img {
-    max-height: 100%;
+    max-width: 100%;
     border-radius: 0.4rem;
-
 }
 
 .work-copy {
@@ -620,7 +623,6 @@ textarea {
     margin-left: 1rem;
 }
 
-.image-with-text-btn__link {}
 
 .download-btn img {
     margin-left: 0.1rem;
@@ -632,32 +634,35 @@ textarea {
     margin: 2rem auto;
 }
 
+
+
 /* -------- Lightbox  -------  */
 .gallery-container {}
 
 .my-gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 1rem auto;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .my-gallery img {
     opacity: 0.8;
     width: 100%;
     display: block;
-    -webkit-transform: scale(1.15);
     transform: scale(1.15);
     transition: opacity 0.5s, -webkit-transform .5s;
-    -webkit-transition: opacity 0.5s, -webkit-transform .5s;
     transition: transform .5s, opacity 0.5s;
     transition: transform .5s, opacity 0.5s, -webkit-transform .5s;
 }
 
 .my-gallery img:hover {
     opacity: 1;
-    -webkit-transform: scale(1.03);
     transform: scale(1.03);
+}
+
+.final_img figure {
+    min-width: 29.5%;
 }
 
 .my-gallery figure {
@@ -665,7 +670,10 @@ textarea {
     overflow: hidden;
     background-color: var(--sec-color-black);
     border-radius: 0.2rem;
+    max-width: 23%;
 }
+
+.my-gallery .final_img {}
 
 .my-gallery figcaption {
     display: none;

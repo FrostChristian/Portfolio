@@ -305,6 +305,10 @@
         margin: 0 auto;
     }
 
+    .button_row {
+        margin: 0;
+    }
+
     /* small phones 0 - 480px */
     @media only screen and (max-width: 480px) {
         .brand {
@@ -391,10 +395,20 @@
             margin: 0;
         }
 
+        .button_row {
+            flex-direction: column;
+        }
+
+        .download-btn {
+            margin: 1rem 0 0 0;
+        }
+
+        .image-with-text-btn__text {
+            font-size: 140%;
+        }
+
         .footer-social li img {
             -webkit-transform: scale(1.5);
             transform: scale(1.5);
         }
     }
-
-
