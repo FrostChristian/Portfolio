@@ -3,7 +3,6 @@
 /*---------------------------------------------------------*/
 /* max 1201 */
 @media only screen and (min-width: 1201px) {}
-}
 
 /* big tabs 1024px - 1200 */
 @media only screen and (max-width: 1200px) {}
@@ -26,25 +25,25 @@
     .showcase-copy {
         margin: 1rem 2% 0rem 2%;
         line-height: 1.15rem;
+
     }
 
     .showcase-col {
         padding: 0.2rem;
-        height: 22rem;
+        height: 20rem;
         border: 1px solid var(--sec-color-grey);
+    }
+
+    .showcase-col:hover {
+        border: 1px solid var(--main-color-light);
     }
 
     .showcase-left {
         margin-left: 2%;
     }
 
-
     .showcase-right {
         margin-right: 2%;
-    }
-
-    .showcase-container {
-        height: 9rem;
     }
 
     .showcase-col-portfolio {
@@ -225,13 +224,17 @@
     }
 
     .showcase-col {
-        height: 21rem;
+        height: 20rem;
         padding: 2%;
         border: 1px solid var(--sec-color-grey);
     }
 
     .showcase-left {
         margin: 0px 1%;
+    }
+
+    .showcase-middle {
+        margin-right: 0.4rem;
     }
 
     .showcase-right {
@@ -241,8 +244,8 @@
     .showcase-container {
         display: block;
         margin: 1rem auto;
-        height: 12rem;
-        max-width: 25rem;
+        max-width: 15rem;
+
     }
 
     /* contact form */
@@ -308,107 +311,108 @@
     .button_row {
         margin: 0;
     }
+}
 
-    /* small phones 0 - 480px */
-    @media only screen and (max-width: 480px) {
-        .brand {
-            -webkit-transform: scale(0.65);
-            transform: scale(0.65);
-            margin-left: 1rem;
-        }
-
-        body {
-            font-size: .7rem;
-        }
-
-        h1 {
-            font-size: 180%;
-        }
-
-        h2 {
-            font-size: 130%;
-        }
-
-        h4 {
-            margin-top: 1rem;
-        }
-
-        h5 {
-            margin: 1rem 2rem 0 2rem;
-        }
-
-        .btn {
-            font-size: 0.8rem;
-        }
-
-        section {
-            padding: 1rem 0;
-        }
-
-        .center-column {
-            width: 90%;
-        }
-
-        .introduction-copy {
-            line-height: 1.1rem;
-            color: #fff;
-        }
-
-        .showcase-copy {
-            margin-top: 0.5rem;
-            line-height: 1.1rem;
-        }
-
-        .showcase-col {
-            height: 18rem;
-            padding: 2%;
-            border: 1px solid var(--sec-color-grey);
-        }
-
-        .showcase-container {
-            margin: 0rem auto;
-            height: 10rem;
-        }
-
-        .contact-form-header {
-            margin-bottom: 1.5rem;
-        }
-
-        input[type=text],
-        input[type=email],
-        select,
-        textarea {
-            font-size: 120%;
-            padding: 0.2rem;
-
-        }
-
-        textarea {
-            height: 8rem;
-            max-width: 100%;
-            min-height: 2rem;
-            min-width: 20%;
-            margin-bottom: -1rem;
-        }
-
-        .footer-social {
-            margin: 0;
-        }
-
-        .button_row {
-            flex-direction: column;
-        }
-
-        .download-btn {
-            margin: 1rem 0 0 0;
-        }
-
-        .image-with-text-btn__text {
-            font-size: 140%;
-        }
-
-        .footer-social li img {
-            -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-        }
+/* small phones 0 - 480px */
+@media only screen and (max-width: 480px) {
+    .brand {
+        -webkit-transform: scale(0.65);
+        transform: scale(0.65);
+        margin-left: 1rem;
     }
+
+    body {
+        font-size: .7rem;
+    }
+
+    h1 {
+        font-size: 180%;
+    }
+
+    h2 {
+        font-size: 130%;
+    }
+
+    h4 {
+        margin-top: 1rem;
+    }
+
+    h5 {
+        margin: 1rem 2rem 0 2rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    section {
+        padding: 1rem 0;
+    }
+
+    .center-column {
+        width: 90%;
+    }
+
+    .introduction-copy {
+        line-height: 1.1rem;
+        color: #fff;
+    }
+
+    .showcase-copy {
+        margin-top: 0.5rem;
+        line-height: 1.1rem;
+    }
+
+    .showcase-col {
+        height: 18rem;
+        padding: 2%;
+        border: 1px solid var(--sec-color-grey);
+    }
+
+    .showcase-container {
+        margin: 1rem auto;
+        width: 14rem;
+    }
+
+    .contact-form-header {
+        margin-bottom: 1.5rem;
+    }
+
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+        font-size: 120%;
+        padding: 0.2rem;
+
+    }
+
+    textarea {
+        height: 8rem;
+        max-width: 100%;
+        min-height: 2rem;
+        min-width: 20%;
+        margin-bottom: -1rem;
+    }
+
+    .footer-social {
+        margin: 0;
+    }
+
+    .button_row {
+        flex-direction: column;
+    }
+
+    .download-btn {
+        margin: 1rem 0 0 0;
+    }
+
+    .image-with-text-btn__text {
+        font-size: 140%;
+    }
+
+    .footer-social li img {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}

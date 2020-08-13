@@ -44,6 +44,15 @@ section {
     padding: 4rem 0rem;
 }
 
+.link-no-decorations {
+    text-decoration: none;
+    color: var(--sec-color-black);
+}
+
+.link-no-color {
+    color: var(--sec-color-black);
+}
+
 /* ---------- Headings ----------*/
 h1,
 h2,
@@ -92,6 +101,7 @@ h6 {
 .smallprint {
     font-size: 60%;
 }
+
 
 /*-----------Buttons------------*/
 .btn:link,
@@ -160,8 +170,20 @@ h6 {
     color: #fff;
 }
 
+.btn-dummy-full {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-weight: 400;
+    border-radius: 5rem;
+    color: #fff;
+    border: 2px solid var(--main-color-dark);
+    background-color: var(--main-color-dark);
+}
+
 /* button with img */
 .image-with-text-btn {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
@@ -182,7 +204,6 @@ h6 {
     font-weight: 400;
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
-
 }
 
 .image-with-text-btn a:hover {
@@ -237,6 +258,8 @@ header {
 
 .section-nav__hero,
 .section-nav__main {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
     flex: 0 1 50%;
 }
 
@@ -251,7 +274,6 @@ header {
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-
 }
 
 .section-nav__contact {
@@ -260,23 +282,32 @@ header {
     flex: 0 1 33%;
     margin-right: 1rem;
     position: relative;
-
 }
 
 .section-nav__rest {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
     flex: 0 1 50%;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     list-style: none;
     position: relative;
 }
 
 .hero-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
     margin-bottom: -0.2rem;
-
 }
 
 .hero-footer img {
@@ -300,6 +331,7 @@ header {
 .section-nav__rest li p {
     color: var(--main-color-dark);
     border-bottom: 2px solid var(--main-color-dark);
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 
@@ -319,15 +351,19 @@ header {
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.98);
+    -webkit-box-shadow: 0 2px 2px var(--sec-color-grey);
     box-shadow: 0 2px 2px var(--sec-color-grey);
     z-index: 9999;
 }
 
 .section-nav__container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-
 }
 
 .sticky .section-nav__container {
@@ -338,24 +374,6 @@ header {
     margin-top: 0.4rem;
     height: 2.2rem;
 }
-
-/*
-.sticky .section-nav__rest li a:link,
-.sticky .section-nav__rest li a:visited {
-    padding: 0.4rem 0;    color: var(--sec-color-black);
-    text-decoration: none;
-    font-size: 95%;
-    border-bottom: 2px solid transparent;
-}
-
-.sticky .section-nav__rest li a:hover,
-.sticky .section-nav__rest li a:active {
-    color: var(--main-color-dark);
-    border-bottom: 2px solid var(--main-color-dark);
-    -webkit-transition: border-bottom 0.2s;
-    transition: border-bottom 0.2s;
-}
-*/
 
 .sticky + .hero-body {
     padding-top: 8.25rem;
@@ -423,25 +441,31 @@ header {
 }
 
 .showcase-copy {
-    margin: 1rem auto;
-    text-align: justify;
-    line-height: 1.45rem;
+    margin: 1rem 0.5rem;
+    text-align: center;
 }
 
 .showcase-col {
-    height: 27rem;
+    height: 25rem;
     padding: 0.3rem;
     border: 2px solid var(--sec-color-grey);
     border-radius: 0.5rem;
     background-color: #fff;
+    -webkit-transition: border 0.2s, background-color 0.2s;
+    transition: border 0.2s, background-color 0.2s;
 }
 
-.showcase-middle {
-    margin-right: 0.4rem;
+.showcase-col:hover {
+    border: 2px solid var(--main-color-light);
+}
+
+.showcase-col:hover .showcase-img {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .showcase-container {
-    height: 11.5rem;
     border-radius: 5px;
     display: inline-block;
     overflow: hidden;
@@ -449,13 +473,14 @@ header {
 }
 
 .showcase-container img {
-    opacity: 0.7;
+    opacity: 1;
     width: 100%;
+    height: 100%;
     display: block;
     -webkit-transform: scale(1.15);
     transform: scale(1.15);
-    -webkit-transition: opacity 0.5s, -webkit-transform .5s;
     transition: opacity 0.5s, -webkit-transform .5s;
+    -webkit-transition: opacity 0.5s, -webkit-transform .5s;
     transition: transform .5s, opacity 0.5s;
     transition: transform .5s, opacity 0.5s, -webkit-transform .5s;
 }
@@ -597,7 +622,11 @@ textarea {
 }
 
 .work-img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -623,26 +652,28 @@ textarea {
     margin-left: 1rem;
 }
 
-
 .download-btn img {
     margin-left: 0.1rem;
     margin-bottom: 0.3rem;
 }
 
 .button_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 2rem auto;
 }
 
-
-
 /* -------- Lightbox  -------  */
-.gallery-container {}
-
 .my-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 1rem auto;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -650,14 +681,17 @@ textarea {
     opacity: 0.8;
     width: 100%;
     display: block;
-    transform: scale(1.15);
+    -webkit-transform: scale(1.10);
+    transform: scale(1.10);
     transition: opacity 0.5s, -webkit-transform .5s;
+    -webkit-transition: opacity 0.5s, -webkit-transform .5s;
     transition: transform .5s, opacity 0.5s;
     transition: transform .5s, opacity 0.5s, -webkit-transform .5s;
 }
 
 .my-gallery img:hover {
     opacity: 1;
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
 }
 
@@ -672,8 +706,6 @@ textarea {
     border-radius: 0.2rem;
     max-width: 23%;
 }
-
-.my-gallery .final_img {}
 
 .my-gallery figcaption {
     display: none;
