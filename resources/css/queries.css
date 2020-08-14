@@ -5,7 +5,11 @@
 @media only screen and (min-width: 1201px) {}
 
 /* big tabs 1024px - 1200 */
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+    .work-copy {
+        margin-top: 0.3rem;
+    }
+}
 
 /* small tabs to big tabs 768 - 1023px */
 @media only screen and (max-width: 1023px) {
@@ -54,6 +58,7 @@
     h5 {
         margin: 0;
     }
+
 }
 
 /* small phones to tabs 481 - 767px */
@@ -93,6 +98,8 @@
     .section-nav__hero,
     .section-nav__main {
         width: 100%;
+        -webkit-box-flex: 0;
+        -ms-flex: none;
         flex: none;
     }
 
@@ -103,6 +110,9 @@
 
 
     .section-nav__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         width: 100%;
     }
@@ -132,7 +142,10 @@
         width: 2rem;
         height: 4px;
         border-radius: 1rem;
+        -webkit-transition: -webkit-transform 250ms ease-in-out;
+        transition: -webkit-transform 250ms ease-in-out;
         transition: transform 250ms ease-in-out;
+        transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 
     }
 
@@ -177,10 +190,12 @@
     }
 
     .nav-open .hamburger {
+        -webkit-transform: rotate(0.625turn);
         transform: rotate(0.625turn);
     }
 
     .nav-open .hamburger:before {
+        -webkit-transform: rotate(90deg) translateX(-10px);
         transform: rotate(90deg) translateX(-10px);
     }
 
@@ -293,15 +308,9 @@
         margin: 2rem auto;
     }
 
-
     /*---------------------------------------------------------*/
     /*/Portfolio.html
 /*---------------------------------------------------------*/
-    .work-copy {
-        text-align: left;
-        margin: 1rem auto;
-        word-spacing: 0rem;
-    }
 
     .showcase-col-portfolio {
         width: 100%;
@@ -333,7 +342,8 @@
         font-size: 130%;
     }
 
-    h4 {
+    h4,
+    h6 {
         margin-top: 1rem;
     }
 
@@ -400,6 +410,9 @@
     }
 
     .button_row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -415,4 +428,5 @@
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
     }
+
 }

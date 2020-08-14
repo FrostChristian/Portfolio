@@ -110,11 +110,11 @@ $(document).ready(function () {
     // Initialization
     $.sls.init({
         defaultLang: "en",
-        path: "/resources/js/languages/",
-        persistent: true,
-        clean: true,
-        attributes: ["title", "data-my-custom-attribute"],
-        observe: document
+            path: "/resources/js/languages/",
+            persistent: true,
+            clean: true,
+            attributes: ["title", "data-my-custom-attribute"],
+            observe: document
     });
 
     // Event hook example

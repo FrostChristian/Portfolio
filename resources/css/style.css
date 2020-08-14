@@ -637,8 +637,10 @@ textarea {
 
 .work-copy {
     text-align: left;
-    margin: 1rem auto;
+    margin: 1rem auto 2rem auto;
     word-spacing: 0.2rem;
+    font-size: 90%;
+
 }
 
 .showcase-col-portfolio {
