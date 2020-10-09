@@ -7,6 +7,29 @@
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $message = trim($_POST["message"]);
 
+    $response = $_POST["g-recaptcha-response"];
+
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+	$data = array(
+		'secret' => '6Lcjsc8ZAAAAADNhGuBn4gTh4CIj1FBoLs9lswje',
+		'response' => $_POST["g-recaptcha-response"]
+	);
+	$options = array(
+		'http' => array (
+			'method' => 'POST',
+			'content' => http_build_query($data)
+		)
+	);
+	$context  = stream_context_create($options);
+	$verify = file_get_contents($url, false, $context);
+	$captcha_success=json_decode($verify);
+   
+    if ($captcha_success->success==false) {
+		echo "<p>You are a bot! Go away!</p>";
+	} else if ($captcha_success->success==true) {
+		echo "<p>You are not not a bot!</p>";
+	}
+
     // Check the data.
     if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         header("Location: https://www.frostig.de/contact-error.html");

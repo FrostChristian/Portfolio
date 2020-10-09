@@ -110,11 +110,11 @@ $(document).ready(function () {
     // Initialization
     $.sls.init({
         defaultLang: "en",
-            path: "/resources/js/languages/",
-            persistent: true,
-            clean: true,
-            attributes: ["title", "data-my-custom-attribute"],
-            observe: document
+        path: "/resources/js/languages/",
+        persistent: true,
+        clean: true,
+        attributes: ["title", "data-my-custom-attribute"],
+        observe: document
     });
 
     // Event hook example
@@ -125,7 +125,45 @@ $(document).ready(function () {
         }
         console.log("Language switched: " + event.message);
     });
+
+    // -----------------recaptcha--------------------*/
+/*
+    $('#contact-form').on('submit', function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: "mail.php",
+            method: "POST",
+            data: $(this).serialize(),
+            dataType: "json",
+            beforeSend: function () {
+                $('#register').attr('disabled', 'disabled');
+            },
+            success: function (data) {
+                $('#register').attr('disabled', false);
+                if (data.success) {
+                    $('#captcha_form')[0].reset();
+                    $('#name_error').text('');
+                    $('#email_error').text('');
+                    $('#interest_error').text('');
+                    $('#message_error').text('');
+                    $('#captcha_error').text('');
+                    grecaptcha.reset();
+                    alert('Form Successfully validated');
+                } else {
+                    $('#name_error').text(data.name_error);
+                    $('#email_error').text(data.email_error);
+                    $('#interest_error').text(data.interest_error);
+                    $('#message_error').text(data.message_error);
+                    $('#captcha_error').text(data.captcha_error);
+                }
+            }
+        })
+    });*/
+    // -----------------recaptcha--------------------*/
+
+
 });
+
 
 function selectLanguage(select) {
     $.sls.setLang(select.value);
@@ -344,3 +382,82 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
 // ----------------- end lightbox--------------------*/
+// ----------------- GOOGLE CHPTCHA--------------------*/
+
+const publicKey = ""; //GOOGLE public key
+
+// Get token from API
+function check_grecaptcha() {
+    grecaptcha.ready(function () {
+        grecaptcha.execute(publicKey, {
+            action: "ajaxForm"
+        }).then(function (token) {
+            $("[name='recaptcha-token']").val(token);
+        });
+    });
+}
+
+$(function() {
+    check_grecaptcha();
+    $("form").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 3
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                required: true,
+                minlength: 5
+            }
+        },
+        // Customize your messages
+        messages: {
+            name: {
+                required: "Please enter your name.",
+                minlength: "Must be at least 3 characters long."
+            },
+            email: "Please enter a valid email.",
+            message: {
+                required: "Please enter your message.",
+                minlength: "Must be at least 5 characters long."
+            }
+        },
+        errorClass: "invalid-feedback",
+        highlight: function (element) {
+            $(element).addClass("is-invalid").removeClass("is-valid");
+        },
+        unhighlight: function (element) {
+            $(element).addClass("is-valid").removeClass("is-invalid");
+        },
+        submitHandler: function (form) {
+            $(".spinner-border").removeClass("d-none");
+            $.get(form.action, $(form).serialize())
+                .done(function (response) {
+                    $(".toast-body").html(JSON.parse(response));
+                    $(".toast").toast('show');
+                    $(".spinner-border").addClass("d-none");
+                    $("#submit-btn").prop("disabled", true);
+                    check_grecaptcha();
+                    setTimeout(function () {
+                        $("#submit-btn").prop("disabled", false);
+                        $("form").trigger("reset");
+                        $("form").each(function () {
+                            $(this).find(".form-control").removeClass("is-valid")
+                        })
+                    }, 3000);
+                })
+                .fail(function (response) {
+                    $(".toast-body").html(JSON.parse(response));
+                    $(".toast").toast('show');
+                    $(".spinner-border").addClass("d-none");
+                });
+        }
+    });
+});
+
+
+// ----------------- GOOGLE CHPTCHA--------------------*/
