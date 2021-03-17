@@ -383,7 +383,7 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 initPhotoSwipeFromDOM('.my-gallery');
 // ----------------- end lightbox--------------------*/
 // ----------------- GOOGLE CHPTCHA--------------------*/
-
+/*
 const publicKey = ""; //GOOGLE public key
 
 // Get token from API
@@ -458,6 +458,6 @@ $(function() {
         }
     });
 });
-
+*/
 
 // ----------------- GOOGLE CHPTCHA--------------------*/

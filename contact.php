@@ -14,27 +14,12 @@
     <link rel="manifest" href="/resources/img/favicons/site.webmanifest">
     <link rel="mask-icon" href="/resources/img/favicons/safari-pinned-tab.svg" color="#3578ae">
     <link rel="shortcut icon" href="/resources/img/favicons/favicon.ico">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="vendor/css/1.3_grid.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
     <title lang="en">Christian Frost - Contact Form</title>
-
-    <script src="https://www.google.com/recaptcha/api.js?render=6Leyq88ZAAAAAClDP9PQ5LC3qHkTg8nMzt4RexEa"></script>
-
-<script>
-    grecaptcha.ready(function() {
-    // do request for recaptcha token
-    // response is promise with passed token
-        grecaptcha.execute('6Leyq88ZAAAAAClDP9PQ5LC3qHkTg8nMzt4RexEa', {action:'validate_captcha'})
-                  .then(function(token) {
-            // add token value to form
-            document.getElementById('g-recaptcha-response').value = token;
-        });
-    });
-</script>
 </head>
 
 <body id="page-top" class="nav-closed">
@@ -67,14 +52,15 @@
                 </div>
             </div>
             <div class="contact-form-body">
-                <form method="POST" id="contact-form" class="contact-form">
+                <form method="POST" action="resources/php/mail.php" class="contact-form">
                     <div class="row">
-                        <div class="col span-1-of-3 has-margin-left">
-                            <label lang="en" for="name">Name:</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="text" name="name" id="name" placeholder="Name" >
-                            <span id="name_error"></span>
+                        <div class="row">
+                            <div class="col span-1-of-3 has-margin-left">
+                                <label lang="en" for="name">Name:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" name="name" id="name" placeholder="Name" >
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -82,8 +68,7 @@
                             <label lang="en" for="email">E-Mail:</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="email" name="email" id="email" placeholder="email@gmail.com">
-                            <span id="email_error" class="section-nav__brand" >vv</span>
+                            <input type="email" name="email" id="email" placeholder="email@gmail.com" >
                         </div>
                     </div>
                     <div class="row">
@@ -91,7 +76,7 @@
                             <label lang="en" for="interest">Interest:</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <select name="interest" id="interest">
+                            <select name="interest"  id="interest">
                                 <option lang="en" value="non-select" disabled selected>Select an option...</option>
                                 <option lang="en" value="say-hello">Say Hello</option>
                                 <option lang="en" value="portfolio">Portfolio</option>
@@ -99,7 +84,6 @@
                                 <option lang="en" value="bug-improvements">Bugs / Improvements</option>
                                 <option lang="en" value="other-interest">Other Interest...</option>
                             </select>
-                            <span id="interest_error"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -107,8 +91,7 @@
                             <label lang="en">Drop me a line:</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <textarea name="message" id="message" placeholder="Hi, ..."></textarea>
-                            <span id="message_error"></span>
+                            <textarea name="message"  placeholder="Hi, ..."></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -116,9 +99,8 @@
                             <label>&nbsp;</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-                            <input type="hidden" name="action" value="validate_captcha">
-                            <button lang="en" class="btn btn-submit" name="send" id="send" type="submit">Send it!</button>
+                        <div class="g-recaptcha" data-sitekey="6Le7A38aAAAAAPcsgSQK3JuicWhu9NfuIEYws2x8"></div>
+                            <button lang="en" name="submit_form" class="btn btn-submit" type="submit">Send it!</button>
                         </div>
                     </div>
                 </form>
@@ -152,7 +134,7 @@
         <div class="row">
             <ul class="footer-copyright is-centered">
                 <li>
-                    <p lang="en">Handmade by me 2020</p>
+                    <p lang="en">Handmade by me 2021</p>
                 </li>
                 <li>
                     <p>&copy;</p>
@@ -162,51 +144,15 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js" integrity="sha256-9uAoNWHdszsUDhSXf/rVcWOqKPfi5/8V5R4UdbZle2A=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/503e25a38a.js" crossorigin="anonymous"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="vendor/js/jquery-sls.js"></script>
     <script src="vendor/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#contact-form').on('submit', function(event) {
-                event.preventDefault();
-                console.log( $( this ).serialize() );
-                $.ajax({
-                    url: "/resources/php/mail.php",
-                    method: "POST",
-                    dataType:"json",
-                    data: $(this).serialize(),
-                    beforeSend: function() {
-                        $('#send').attr('disabled', 'disabled');
-                    },
-                    success: function(data) {
-                        $('#send').attr('disabled', false);
-                        if (data.success) {
-                            $('#captcha_form')[0].reset();
-                            $('#name_error').text('');
-                            $('#email_error').text('');
-                            $('#message_error').text('');
-                            $('#captcha_error').text('');
-                            grecaptcha.reset();
-                            alert('Form Successfully validated');
-                            console.log("success");
-                        } else {
-                            $('#name_error').text(data.name_error);
-                            $('#email_error').text(data.email_error);
-                            $('#message_error').text(data.message_error);
-                            $('#captcha_error').text(data.captcha_error);
-                            console.log("no success");
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-                        }
-                    }
-                })
-            });
-        });
-
-    </script>
 </body>
 
 </html>

@@ -1,6 +1,29 @@
 <?php
 
-    // Get the form fields, removes html tags and whitespace.
+//if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+    $privatekey = "6Le7A38aAAAAACfoGddVfBnLY4cIClX_4Lm2Cr1q";
+    $captcha = $_POST['g-recaptcha-response'];
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $data = array(
+        'secret' => $privatekey,
+        'response' => $captcha,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    );
+  
+    $curlConfig = array(
+        CURLOPT_URL => $url,
+        CURLOPT_POST => true,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POSTFIELDS => $data
+    );
+  
+    $ch = curl_init();
+    curl_setopt_array($ch, $curlConfig);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    $jsonResponse = json_decode($response);
+    if ($jsonResponse->success === true) {
+       // Get the form fields, removes html tags and whitespace.
     $name = strip_tags(trim($_POST["name"]));
     $name = str_replace(array("\r","\n"),array(" "," "),$name);
     $interest = trim($_POST['interest']);
@@ -35,6 +58,17 @@
     mail($recipient, $subject, $email_content, $email_headers);
     
     // Redirect to the index.html page with success code
+    
     header("Location: https://www.frostig.de/contact-success.html");
+    } else {
+        
+        header("Location: https://www.frostig.de/contact-error.html");
+        exit;
+      }
+  //} else{
+    //header("Location: https://www.frostig.de/contact-error.html");
+    //exit;
+   // echo   "Please click on the reCAPTCHA box.";
+ // }
 
 ?>

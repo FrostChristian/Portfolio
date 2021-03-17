@@ -1,5 +1,9 @@
 /*---------------------------------------------------------*/
+
+
 /*Basic Setup*/
+
+
 /*---------------------------------------------------------*/
 
 :root {
@@ -27,8 +31,13 @@ body {
     overflow-x: hidden;
 }
 
+
 /*---------------------------------------------------------*/
+
+
 /*Reuasable*/
+
+
 /*---------------------------------------------------------*/
 
 .row {
@@ -53,7 +62,9 @@ section {
     color: var(--sec-color-black);
 }
 
+
 /* ---------- Headings ----------*/
+
 h1,
 h2,
 h3,
@@ -95,7 +106,6 @@ h6 {
     font-size: 100%;
     text-align: left;
     margin-top: 2rem;
-
 }
 
 .smallprint {
@@ -104,6 +114,7 @@ h6 {
 
 
 /*-----------Buttons------------*/
+
 .btn:link,
 .btn:visited {
     display: inline-block;
@@ -180,7 +191,9 @@ h6 {
     background-color: var(--main-color-dark);
 }
 
+
 /* button with img */
+
 .image-with-text-btn {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -231,9 +244,15 @@ h6 {
     font-size: 90%;
 }
 
+
 /*---------------------------------------------------------*/
+
+
 /*HEADER*/
+
+
 /*---------------------------------------------------------*/
+
 header {
     max-width: 1148px;
     margin: 2rem auto 0 auto;
@@ -335,7 +354,9 @@ header {
     transition: border-bottom 0.2s;
 }
 
+
 /* Mobile nav*/
+
 .mobile-nav-icon {
     float: right;
     color: var(--main-color-light);
@@ -344,7 +365,9 @@ header {
     display: none !important;
 }
 
+
 /* Sticky nav*/
+
 .sticky {
     position: fixed;
     top: 0;
@@ -375,7 +398,7 @@ header {
     height: 2.2rem;
 }
 
-.sticky + .hero-body {
+.sticky+.hero-body {
     padding-top: 8.25rem;
 }
 
@@ -392,14 +415,22 @@ header {
     cursor: context-menu;
 }
 
+
 /* hero  */
+
 .hero-body__txt_box {
     padding: 2rem;
 }
 
+
 /*---------------------------------------------------------*/
+
+
 /*introduction*/
+
+
 /*---------------------------------------------------------*/
+
 .section-introduction {
     background-color: var(--main-color-light);
     padding-bottom: 15rem;
@@ -420,9 +451,15 @@ header {
     word-break: break-word;
 }
 
+
 /*---------------------------------------------------------*/
+
+
 /*showcase*/
+
+
 /*---------------------------------------------------------*/
+
 .box {
     border-radius: 12px;
     -webkit-box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px var(--sec-color-grey);
@@ -495,9 +532,15 @@ header {
     padding: 1rem;
 }
 
+
 /*---------------------------------------------------------*/
+
+
 /*contact form*/
+
+
 /*---------------------------------------------------------*/
+
 .contact-form {
     width: 50%;
     margin: 0 auto;
@@ -533,6 +576,7 @@ textarea {
     background-color: var(--main-color-light);
     font-size: 110%;
     margin-left: 33%;
+    margin-top: 1rem;
     border-radius: 5rem;
 }
 
@@ -553,8 +597,13 @@ textarea {
     outline: none;
 }
 
+
 /*---------------------------------------------------------*/
+
+
 /*footer*/
+
+
 /*---------------------------------------------------------*/
 
 .section-footer {
@@ -614,9 +663,13 @@ textarea {
     width: 6rem;
 }
 
+
 /*---------------------------------------------------------*/
+
+
 /*/Portfolio.html
 /*---------------------------------------------------------*/
+
 .firstexample {
     margin-top: -14rem;
 }
@@ -640,7 +693,6 @@ textarea {
     margin: 1rem auto 2rem auto;
     word-spacing: 0.2rem;
     font-size: 90%;
-
 }
 
 .showcase-col-portfolio {
@@ -666,7 +718,9 @@ textarea {
     margin: 2rem auto;
 }
 
+
 /* -------- Lightbox  -------  */
+
 .my-gallery {
     display: -webkit-box;
     display: -ms-flexbox;

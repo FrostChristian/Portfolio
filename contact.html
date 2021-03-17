@@ -35,7 +35,9 @@
             </div>
             <div class="section-nav__main js--main-nav">
                 <ul class="section-nav__rest">
-                    <li><a lang="en" href="/about.html"></a></li>
+                    <li>
+                        <a lang="en" href="/about.html"></a>
+                    </li>
                     <li><a lang="en" href="/portfolio.html">Portfolio</a></li>
                 </ul>
                 <div class="section-nav__contact">
@@ -59,7 +61,7 @@
                                 <label lang="en" for="name">Name:</label>
                             </div>
                             <div class="col span-2-of-3">
-                                <input type="text" name="name" id="name" placeholder="Name" required>
+                                <input type="text" required name="name" id="name" placeholder="Name">
                             </div>
                         </div>
                     </div>
@@ -68,7 +70,7 @@
                             <label lang="en" for="email">E-Mail:</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="email" name="email" id="email" placeholder="email@gmail.com" required>
+                            <input type="email" required name="email" id="email" placeholder="email@gmail.com">
                         </div>
                     </div>
                     <div class="row">
@@ -91,7 +93,7 @@
                             <label lang="en">Drop me a line:</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <textarea name="message" required placeholder="Hi, ..."></textarea>
+                            <textarea name="message" placeholder="Hi, ..."></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -99,7 +101,8 @@
                             <label>&nbsp;</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <button lang="en" class="btn btn-submit" type="submit">Send it!</button>
+                            <div class="g-recaptcha" data-sitekey="6Le7A38aAAAAAPcsgSQK3JuicWhu9NfuIEYws2x8"></div>
+                            <button lang="en" name="submit_form" class="btn btn-submit" type="submit">Send it!</button>
                         </div>
                     </div>
                 </form>
@@ -110,9 +113,15 @@
         <div class="row">
             <div class="col span-1-of-2">
                 <ul class="footer-social">
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christian-frost-6a18571aa/"><img src="vendor/img/logo-linkedin.svg" alt="LinkedIn Logo"></a></li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/FrostChristian"><img src="vendor/img/logo-github.svg" alt="GitHub Logo"></a></li>
-                    <li><a href="mailto:christian.frost.work@gmail.com?subject=Hi%20Chris!"><img src="vendor/img/mail-outline.svg" alt="Mail me Logo"></a></li>
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christian-frost-6a18571aa/"><img src="vendor/img/logo-linkedin.svg" alt="LinkedIn Logo"></a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/FrostChristian"><img src="vendor/img/logo-github.svg" alt="GitHub Logo"></a>
+                    </li>
+                    <li>
+                        <a href="mailto:christian.frost.work@gmail.com?subject=Hi%20Chris!"><img src="vendor/img/mail-outline.svg" alt="Mail me Logo"></a>
+                    </li>
                 </ul>
             </div>
             <div class="col span-1-of-2">
@@ -133,7 +142,7 @@
         <div class="row">
             <ul class="footer-copyright is-centered">
                 <li>
-                    <p lang="en">Handmade by me 2020</p>
+                    <p lang="en">Handmade by me. 2021</p>
                 </li>
                 <li>
                     <p>&copy;</p>
@@ -149,6 +158,7 @@
     <script src="vendor/js/jquery-sls.js"></script>
     <script src="vendor/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Christian Frost, Gamedesign and Developer. Homepage and Portfolio!">
+    <meta name="description" content="Christian Frost, Gamedesign and Developer. Contact Me Here - success lander!">
     <meta name="msapplication-TileColor" content="#3578ae">
     <meta name="msapplication-config" content="/resources/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#3578ae">
@@ -19,70 +19,29 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
-    <title lang="en">Christian Frost</title>
+    <title lang="en">Christian Frost | Form sent!</title>
 </head>
 
-<body id="page-top" class="nav-closed">
-    <header>
-        <nav class="section-nav">
-            <div class="section-nav__hero">
-                <a href="index.html"><img src="resources/img/logo_v1.svg" alt="Brand_v1" class="section-nav__brand"></a>
-            </div>
-            <div class="section-nav__mobile">
-                <button class="nav-toggle" aria-label="toggle navigation">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
-            <div class="section-nav__main js--main-nav">
-                <ul class="section-nav__rest">
-                    <li><a lang="en" href="/portfolio.html">Portfolio</a></li>
-                    <li><a lang="en" class="no-link">About Me</a></li>
-                </ul>
-                <div class="section-nav__contact">
-                    <a lang="en" class="btn btn-gohst" href="contact.html">Contact Me</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section class="section-introduction is-centered">
-        <div class="row">
-            <div class="center-column">
-                <h2 lang="en">Hey! This is all about me!</h2>
-                <h2 lang="en">(Currently under Construction 13/08/2020)</h2>
-            </div>
-        </div>
-    </section>
-    <section class="section-showcase js--showcase" id="showcase">
-        <div class="row">
-            <div class="box">
-                <div class="row ">
-                    <h3 lang="en">My Skills</h3>
-                </div>
-                <div class="row">
-                    <div class="portfolio-btn is-centered">
-                        <a lang="en" class="btn btn-full is-centered" href="#">Currently under Construction 13/08/2020</a>
-                    </div>
+<body>
+    <section class="section-submission-success">
+        <div class="hero-body">
+            <div class="row is-centered">
+                <div>
+                    <img src="resources/img/mailbox_success.svg" style="margin-bottom: 2rem; max-width: 15rem;">
+                    <h2 lang="en" style="color: #333">Message received. Thanks!</h2>
+                    <h4 lang="en" style="padding: 1rem; color: #333">I'll be in touch with you shortly.</h4>
+                    <a lang="en" class="btn btn-gohst" style="margin-top: 2rem;" href="/">Back to Home!</a>
                 </div>
             </div>
         </div>
     </section>
-
     <footer class="section-footer is-centered">
-        <div class="row">
-            <a lang="en" class="btn btn-top" href="#page-top">Back to Top!</a>
-        </div>
         <div class="row">
             <div class="col span-1-of-2">
                 <ul class="footer-social">
-                    <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christian-frost-6a18571aa/"><img src="vendor/img/logo-linkedin.svg" alt="LinkedIn Logo"></a>
-                    </li>
-                    <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/FrostChristian"><img src="vendor/img/logo-github.svg" alt="GitHub Logo"></a>
-                    </li>
-                    <li>
-                        <a href="mailto:christian.frost.work@gmail.com?subject=Hi%20Chris!"><img src="vendor/img/mail-outline.svg" alt="Mail me Logo"></a>
-                    </li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christian-frost-6a18571aa/"><img src="vendor/img/logo-linkedin.svg" alt="LinkedIn Logo"></a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/FrostChristian"><img src="vendor/img/logo-github.svg" alt="GitHub Logo"></a></li>
+                    <li><a href="mailto:christian.frost.work@gmail.com?subject=Hi%20Chris!"><img src="vendor/img/mail-outline.svg" alt="Mail me Logo"></a></li>
                 </ul>
             </div>
             <div class="col span-1-of-2">
@@ -103,13 +62,14 @@
         <div class="row">
             <ul class="footer-copyright is-centered">
                 <li>
-                    <p lang="en">Handmade by me. 2021</p>
+                    <p lang="en">Handmade by me 2020</p>
                 </li>
                 <li>
                     <p>&copy;</p>
                 </li>
             </ul>
         </div>
+        <div class=" nav-toggle"></div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -119,6 +79,4 @@
     <script src="vendor/js/jquery-sls.js"></script>
     <script src="vendor/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
-</body>
-
-</html>
+</body></html>
