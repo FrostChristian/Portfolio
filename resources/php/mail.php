@@ -1,6 +1,7 @@
 <?php
 
 //if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+    // Dont do nasty things with this github people!
     $privatekey = "6Le7A38aAAAAACfoGddVfBnLY4cIClX_4Lm2Cr1q";
     $captcha = $_POST['g-recaptcha-response'];
     $url = 'https://www.google.com/recaptcha/api/siteverify';
